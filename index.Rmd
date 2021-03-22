@@ -1,4 +1,7 @@
 ---
+title: "Index"
+author: "Satvik"
+date: "3/22/2021"
 output: html_document
 ---
 ## Hi. I'm Satvik.
