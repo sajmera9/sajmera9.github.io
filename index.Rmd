@@ -1,7 +1,6 @@
 ---
-title: "Website"
-author: "Satvik"
-date: "3/22/2021"
 output: html_document
 ---
-# Home Page
+## Hi. I'm Satvik.
+### I was born and raised in the Bay Area. I love rock climbing and music festivals!
+### Currently enrolled in the Master of Science in Data Science program at Southern Methodist University.
