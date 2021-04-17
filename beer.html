@@ -252,6 +252,9 @@ $(document).ready(function () {
 <li>
   <a href="beer.html">Beer Case Study</a>
 </li>
+<li>
+  <a href="CaseStudy2.html">DDS Case Study 02</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -315,10 +318,10 @@ gg_miss_var(merged_data)</code></pre>
 <p><img src="beer_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre class="r"><code>#Display which columns consist of NA values
 sapply(merged_data, function(x) sum(is.na(x)))</code></pre>
-<pre><code>##   Brewery_id    Beer_Name      Beer_ID          ABV          IBU        Style       Ounces 
-##            0            0            0           62         1005            0            0 
-## Brewery_Name         City        State 
-##            0            0            0</code></pre>
+<pre><code>##   Brewery_id    Beer_Name      Beer_ID          ABV          IBU        Style 
+##            0            0            0           62         1005            0 
+##       Ounces Brewery_Name         City        State 
+##            0            0            0            0</code></pre>
 <pre class="r"><code># 4.   Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
 
 #Removed the missing values in the ABV and IBU column.
@@ -436,8 +439,21 @@ na_merged_data %&gt;% ggplot(aes(x = ABV, y = IBU)) + geom_point() + geom_smooth
 library(class)
 library(caret)
 library(e1071)
-library(plyr)
-#Used grepl to find and rename all India Pale Ales to IPA
+library(plyr)</code></pre>
+<pre><code>## ----------------------------------------------------------------------------------------</code></pre>
+<pre><code>## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)</code></pre>
+<pre><code>## ----------------------------------------------------------------------------------------</code></pre>
+<pre><code>## 
+## Attaching package: &#39;plyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise, summarize</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     compact</code></pre>
+<pre class="r"><code>#Used grepl to find and rename all India Pale Ales to IPA
 #Then used grepl to find and rename all Ales to Other Ale
 #Every other type of beer is renamed
 
