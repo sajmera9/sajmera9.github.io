@@ -12,10 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(tidyverse)
 #Read all csvs
-emp.data = read.csv("Data/CaseStudy2-data.csv", header = TRUE)
-newemp.data = read.csv("Data/CaseStudy2-data.csv", header = TRUE)
-case2.no.salary = read.csv("Data/CaseStudy2CompSet No Salary.csv", header=TRUE)
-case2.no.attrition = read.csv("Data/CaseStudy2CompSet No Attrition.csv", header=TRUE)
+emp.data = read.csv("CaseStudy2-data.csv", header = TRUE)
+newemp.data = read.csv("CaseStudy2-data.csv", header = TRUE)
+case2.no.salary = read.csv("CaseStudy2CompSet No Salary.csv", header=TRUE)
+case2.no.attrition = read.csv("CaseStudy2CompSet No Attrition.csv", header=TRUE)
 
 #Convert columns to factor
 cols <- c("JobSatisfaction","Education", "EnvironmentSatisfaction", "JobInvolvement", "JobLevel","PerformanceRating","RelationshipSatisfaction", "WorkLifeBalance","BusinessTravel","StockOptionLevel")
@@ -131,7 +131,7 @@ library(e1071)
 #Average Accuracy, Sensitivity, and Specificity for 100 iterations
 #Average Sensitivity and Accuracy are above .60
 
-iterations = 500
+iterations = 50
 masterAcc = matrix(nrow = iterations)
 masterSen = matrix(nrow = iterations)
 masterSpe = matrix(nrow = iterations)
